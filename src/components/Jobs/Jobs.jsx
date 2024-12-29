@@ -3,7 +3,13 @@ import search from "../../assets/search.svg";
 // import Dropdown from "../Dropdown/Dropdown";
 import RecordTable from "../RecordTable/RecordTable";
 import { Select, Space } from "antd";
+import {useNavigate} from "react-router-dom";
 function Jobs() {
+
+  const navigate = useNavigate();
+
+
+
   //handlechange for antd Select
 
   const handleChange = (value) => {
@@ -64,6 +70,9 @@ function Jobs() {
                 ]}
               />
             </Space>
+          </div>
+          <div>
+            <button className="flex bg-[#F8F9FF]  border border-slate-300 rounded-md ml-1 items-center justify-center p-1  text-md  my-0.5" onClick={() => navigate("/CreateJob")}>Create Job</button>
           </div>
         </div>
       </div>

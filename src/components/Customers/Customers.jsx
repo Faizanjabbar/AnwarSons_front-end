@@ -3,9 +3,15 @@ import search from "../../assets/search.svg";
 // import Dropdown from "../Dropdown/Dropdown";
 import RecordTable from "../RecordTable/RecordTable";
 
+import { useNavigate } from "react-router-dom";
+
 import { Select, Space } from "antd";
 
 function Customers() {
+
+  const navigate = useNavigate();
+
+
   //handlechange for antd Select
 
   const handleChange = (value) => {
@@ -30,18 +36,19 @@ function Customers() {
             <input
               type="search"
               placeholder="Search here"
-              className="border bg-[#F8F9FF] border-gray-300 rounded-md pl-10 pr-3 py-1 text-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="  bg-[#F8F9FF] border border-gray-300 rounded-md pl-10 pr-3 py-1 my-0.5 mr-1 text-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           {/* Code for dropdown */}
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center ">
             {/* <Dropdown /> */}
             <Space wrap>
               <Select
                 defaultValue="Select"
                 style={{
                   width: 100,
+                  height: 34,
                 }}
                 onChange={handleChange}
                 options={[
@@ -65,6 +72,9 @@ function Customers() {
                 ]}
               />
             </Space>
+          </div>
+          <div>
+            <button className="flex bg-[#F8F9FF]  border border-slate-300 rounded-md ml-1 items-center justify-center p-1  text-md  my-0.5" onClick={() => navigate("/CreateCustomer")}>Create Customer</button>
           </div>
         </div>
       </div>

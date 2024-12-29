@@ -38,7 +38,7 @@ export default function Sidebar() {
         </div>
         <div className="flex justify-start m-2 z-10 hover:border-2 hover:rounded-xl hover:border-slate-400 hover:bg-slate-100">
           <img src={customer} alt="setting" className="p-2" />
-          <button className="text-slate-500 text-l z-10" onClick={() => navigate("/customers")}>Customers</button>
+          <button className="text-slate-500 text-lg z-10" onClick={() => navigate("/customers")}>Customers</button>
         </div>
         <div className="flex justify-start m-2 hover:border-2 hover:rounded-xl hover:border-slate-400 hover:bg-slate-100">
           <img src={bills} alt="setting" className="p-2 z-10" />
